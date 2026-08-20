@@ -1,0 +1,7 @@
+Model,MAE (MWh),RMSE (MWh),MAPE (%),R²
+SARIMA,1214.92,1604.52,5.25,
+Prophet,3047.0,3728.0,13.05,
+Hybrid (SARIMA + Prophet),1261.45,1545.61,5.35,
+Weather-only Random Forest,1939.99,2403.55,,0.0186
+Enhanced Random Forest,398.17,526.51,1.67,0.9475
+XGBoost,354.48,461.88,1.5,0.9596
