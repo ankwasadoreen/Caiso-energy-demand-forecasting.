@@ -26,7 +26,38 @@ XGBoost achieved the strongest overall performance:
 | MAPE | 1.50% |
 | R² | 0.9596 |
 
-The enhanced Random Forest was the second-best machine-learning model. SARIMA remained the strongest traditional statistical model.
+The Enhanced Random Forest was the second-best machine-learning model. SARIMA was the strongest statistical forecasting model in Phase 1, while XGBoost achieved the strongest overall performance after weather integration and enhanced feature engineering in Phase 2.
+
+## Project Notebooks
+
+The project is organized into two main analytical notebooks representing two phases of the forecasting workflow.
+
+### Notebook 01 — Energy Demand Exploration & Statistical Forecasting
+
+This notebook focuses on exploratory analysis of CAISO hourly electricity-demand data and the development of traditional time-series forecasting models. The models evaluated include SARIMA, Prophet, and a Hybrid SARIMA–Prophet approach.
+
+Among the Phase 1 statistical forecasting models, SARIMA achieved the best overall accuracy with a MAPE of 5.25%. The Hybrid model provided competitive performance and helped reduce larger forecasting errors, while Prophet was useful for capturing broader trend and seasonal patterns.
+
+### Notebook 02 — NOAA Weather Integration & Machine Learning
+
+This notebook extends the forecasting framework by integrating weather information and applying machine-learning methods. It includes weather-data integration, time-based feature engineering, demand lag features, rolling demand statistics, and machine-learning model development.
+
+The Enhanced Random Forest substantially improved forecasting performance, achieving:
+
+- MAE: 398.17 MW
+- RMSE: 526.51 MW
+- MAPE: 1.67%
+- R²: 0.9475
+
+XGBoost produced the strongest overall Phase 2 performance, achieving:
+
+- MAE: 354.48 MW
+- RMSE: 461.88 MW
+- MAPE: 1.50%
+- R²: 0.9596
+
+Therefore, SARIMA was the strongest model during the statistical forecasting phase, while XGBoost became the best-performing model after weather integration and enhanced feature engineering.
+
 
 ## Feature Engineering
 
@@ -85,12 +116,17 @@ xgboost_feature_importance.csv
 Keep notebooks in execution order:
 
 ```text
-01_energy_data_exploration.ipynb
-02_noaa_weather_integration.ipynb
-03_statistical_forecasting.ipynb
-04_random_forest_models.ipynb
-05_xgboost_model.ipynb
-06_model_comparison.ipynb
+## Notebook Organization
+
+The analysis is organized into two main notebooks, corresponding to the two phases of the project:
+
+1. `01_energy_data_exploration. ipynb`  
+   Energy-demand exploration and statistical forecasting using SARIMA, Prophet, and the Hybrid forecasting approach.
+
+2. `02_noaa_weather_integration. ipynb`  
+   NOAA weather integration, feature engineering, Enhanced Random Forest, XGBoost, and final machine-learning model evaluation.
+
+The notebooks are numbered in execution order to provide a clear progression from statistical forecasting to weather-enhanced machine-learning forecasting.
 ```
 
 Rename your existing notebooks to match these names where appropriate rather than creating duplicate analyses.
