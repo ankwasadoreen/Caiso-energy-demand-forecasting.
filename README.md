@@ -52,7 +52,7 @@ The enhanced machine-learning models use:
 ## Repository Structure
 
 ```text
-energy_forecasting_llm/
+Caiso_energy_demand_ forecasting/
 ├── dashboard/
 │   └── app.py
 ├── data/
